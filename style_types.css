@@ -1,0 +1,581 @@
+/* ==========================================================================
+   LES VOLCANS — Page « Types d'éruptions »
+   Feuille de style n°2 : style_types.css
+   Polices : « Bebas Neue » pour les titres, « Lato » pour les textes
+   ========================================================================== */
+
+/* ---------- 1. Palette et polices ---------- */
+:root {
+    --noir-volcan:  #100b09;
+    --gris-fumee:   #1c1512;
+    --gris-cendre:  #2a211c;
+    --lave:         #e8481c;
+    --braise:       #ff7a33;
+    --or-chaud:     #f4c15d;
+    --cendre-claire: #ded3c9;
+    --texte:        #f2ebe4;
+    --texte-doux:   #b8a99e;
+    --police-titres: 'Bebas Neue', 'Impact', 'Haettenschweiler', sans-serif;
+    --police-textes: 'Lato', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* ---------- 2. Base ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--police-textes);
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--texte);
+    background-color: var(--noir-volcan);
+    background-image:
+        radial-gradient(circle at 80% 0%, rgba(244, 193, 93, 0.12), transparent 42%),
+        radial-gradient(circle at 10% 25%, rgba(232, 72, 28, 0.18), transparent 45%);
+    background-repeat: no-repeat;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--braise);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: var(--or-chaud);
+    text-decoration: underline;
+}
+
+/* ---------- 3. En-tête et menu ---------- */
+.entete {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: rgba(16, 11, 9, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(244, 193, 93, 0.22);
+}
+
+.entete__conteneur {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.7rem 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.8rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: var(--texte);
+}
+
+.logo:hover {
+    text-decoration: none;
+}
+
+.logo__icone {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.logo__texte {
+    font-family: var(--police-titres);
+    font-size: 1.9rem;
+    letter-spacing: 2px;
+    line-height: 0.9;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo__texte small {
+    font-family: var(--police-textes);
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--or-chaud);
+}
+
+.menu__liste {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.menu__lien {
+    display: block;
+    padding: 0.45rem 1rem;
+    border-radius: 40px;
+    color: var(--cendre-claire);
+    font-size: 0.92rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    transition: background-color 0.25s, color 0.25s;
+}
+
+.menu__lien:hover,
+.menu__lien:focus {
+    background-color: rgba(232, 72, 28, 0.25);
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu__lien--actif {
+    background-color: var(--lave);
+    color: #fff;
+}
+
+/* ---------- 4. Ouverture de page ---------- */
+.ouverture {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem 2rem;
+    text-align: center;
+}
+
+.fil {
+    font-size: 0.85rem;
+    letter-spacing: 0.8px;
+    color: var(--texte-doux);
+    margin-bottom: 1.2rem;
+}
+
+.fil span {
+    margin: 0 0.4rem;
+    color: var(--lave);
+}
+
+.fil strong {
+    color: var(--or-chaud);
+}
+
+.ouverture__titre {
+    font-family: var(--police-titres);
+    font-size: clamp(2.8rem, 8vw, 5rem);
+    line-height: 0.95;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--texte);
+    text-shadow: 0 8px 30px rgba(232, 72, 28, 0.45);
+}
+
+.ouverture__chapeau {
+    margin-top: 1.2rem;
+    color: var(--cendre-claire);
+    font-weight: 300;
+}
+
+.ouverture__chapeau strong {
+    color: var(--or-chaud);
+}
+
+/* ---------- 5. Mise en page : sommaire + fiches ---------- */
+.mise-en-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem 4rem;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+/* ---------- 6. Sommaire collant ---------- */
+.sommaire {
+    position: sticky;
+    top: 6rem;
+    background-color: var(--gris-fumee);
+    border: 1px solid rgba(244, 193, 93, 0.2);
+    border-left: 4px solid var(--lave);
+    border-radius: 14px;
+    padding: 1.4rem 1.2rem;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.45);
+}
+
+.sommaire__titre {
+    font-family: var(--police-titres);
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--or-chaud);
+    margin-bottom: 0.8rem;
+}
+
+.sommaire__liste {
+    margin-left: 1.1rem;
+    display: grid;
+    gap: 0.5rem;
+    font-size: 0.92rem;
+}
+
+.sommaire__liste li::marker {
+    color: var(--lave);
+    font-weight: 700;
+}
+
+.sommaire__liste a {
+    color: var(--cendre-claire);
+}
+
+.sommaire__liste a:hover,
+.sommaire__liste a:focus {
+    color: var(--braise);
+}
+
+/* ---------- 7. Fiches des types d'éruptions ---------- */
+.fiches {
+    display: grid;
+    gap: 2.5rem;
+}
+
+.fiche {
+    background-color: var(--gris-fumee);
+    border: 1px solid rgba(244, 193, 93, 0.18);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.5);
+    scroll-margin-top: 6rem;
+}
+
+.fiche__entete {
+    position: relative;
+    padding: 1.6rem 1.8rem 1.2rem 5.6rem;
+    border-bottom: 1px solid rgba(244, 193, 93, 0.14);
+}
+
+.fiche__numero {
+    position: absolute;
+    left: 1.6rem;
+    top: 1.5rem;
+    font-family: var(--police-titres);
+    font-size: 2.8rem;
+    line-height: 1;
+    color: rgba(232, 72, 28, 0.55);
+}
+
+.fiche__titre {
+    font-family: var(--police-titres);
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--or-chaud);
+    line-height: 1.05;
+}
+
+.fiche__etiquette {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.2rem 0.9rem;
+    border: 1px solid var(--lave);
+    border-radius: 30px;
+    font-size: 0.75rem;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--braise);
+}
+
+.fiche__image {
+    width: 100%;
+    aspect-ratio: 21 / 9;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(244, 193, 93, 0.14);
+}
+
+.fiche__liste {
+    list-style: none;
+    padding: 1.5rem 1.8rem 1.8rem;
+    display: grid;
+    gap: 0.9rem;
+}
+
+.fiche__liste li {
+    color: var(--cendre-claire);
+    padding-left: 1.1rem;
+    border-left: 3px solid rgba(232, 72, 28, 0.6);
+}
+
+.cle {
+    display: block;
+    font-family: var(--police-titres);
+    font-size: 1.15rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--braise);
+}
+
+/* ---------- 8. Encadré et bouton vers un lien externe ---------- */
+.encadre {
+    background-image: linear-gradient(135deg, rgba(232, 72, 28, 0.18), rgba(244, 193, 93, 0.08));
+    border: 1px dashed rgba(244, 193, 93, 0.45);
+    border-radius: 18px;
+    padding: 2rem 1.8rem;
+    text-align: center;
+    scroll-margin-top: 6rem;
+}
+
+.encadre__titre {
+    font-family: var(--police-titres);
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--or-chaud);
+    margin-bottom: 0.8rem;
+}
+
+.encadre__texte {
+    color: var(--cendre-claire);
+    max-width: 720px;
+    margin: 0 auto 0.9rem;
+}
+
+.bouton-externe {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.15rem;
+    margin-top: 1.3rem;
+    padding: 1rem 2.2rem;
+    border-radius: 50px;
+    background-image: linear-gradient(135deg, var(--lave), var(--braise));
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.98rem;
+    box-shadow: 0 12px 30px rgba(232, 72, 28, 0.4);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.bouton-externe:hover,
+.bouton-externe:focus {
+    color: #fff;
+    text-decoration: none;
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(232, 72, 28, 0.6);
+}
+
+.bouton-externe__indice {
+    font-size: 0.68rem;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: 0.85;
+}
+
+/* ---------- 9. Pagination entre les pages ---------- */
+.pagination {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+}
+
+.pagination__lien {
+    display: flex;
+    flex-direction: column;
+    padding: 1.2rem 1.4rem;
+    background-color: var(--gris-cendre);
+    border: 1px solid rgba(244, 193, 93, 0.2);
+    border-radius: 14px;
+    color: var(--cendre-claire);
+    transition: border-color 0.25s, transform 0.25s;
+}
+
+.pagination__lien:hover,
+.pagination__lien:focus {
+    border-color: var(--lave);
+    transform: translateY(-4px);
+    text-decoration: none;
+    color: var(--cendre-claire);
+}
+
+.pagination__lien span {
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--texte-doux);
+}
+
+.pagination__lien strong {
+    font-family: var(--police-titres);
+    font-size: 1.6rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--or-chaud);
+}
+
+.pagination__lien--suivant {
+    text-align: right;
+}
+
+/* ---------- 10. Pied de page ---------- */
+.pied {
+    background-color: #0a0706;
+    border-top: 3px solid var(--lave);
+    padding: 3rem 1.5rem 1.5rem;
+}
+
+.pied__conteneur {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2.5rem;
+}
+
+.pied__titre {
+    font-family: var(--police-titres);
+    font-size: 1.4rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--or-chaud);
+    margin-bottom: 0.8rem;
+}
+
+.pied__texte,
+.pied__liste {
+    font-size: 0.9rem;
+    color: var(--texte-doux);
+}
+
+.pied__liste {
+    list-style: none;
+}
+
+.pied__liste li {
+    margin-bottom: 0.45rem;
+}
+
+.pied__liste a {
+    color: var(--cendre-claire);
+}
+
+.pied__signature {
+    max-width: 1150px;
+    margin: 2.5rem auto 0;
+    padding-top: 1.2rem;
+    border-top: 1px solid rgba(244, 193, 93, 0.15);
+    text-align: center;
+    font-size: 0.82rem;
+    color: var(--texte-doux);
+}
+
+/* ==========================================================================
+   11. RESPONSIVE
+   ========================================================================== */
+
+/* Tablettes : jusqu'à 1024 px */
+@media screen and (max-width: 1024px) {
+    .mise-en-page {
+        grid-template-columns: 1fr;
+        gap: 1.8rem;
+    }
+
+    .sommaire {
+        position: static;
+    }
+
+    .sommaire__liste {
+        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+    }
+
+    .pied__conteneur {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Téléphones : jusqu'à 640 px */
+@media screen and (max-width: 640px) {
+    body {
+        font-size: 1rem;
+    }
+
+    .entete__conteneur {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 0.7rem 1rem;
+    }
+
+    .logo__texte {
+        font-size: 1.6rem;
+    }
+
+    .menu__liste {
+        justify-content: center;
+    }
+
+    .menu__lien {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    .ouverture {
+        padding: 2.5rem 1.1rem 1.5rem;
+    }
+
+    .mise-en-page {
+        padding: 0 1.1rem 3rem;
+    }
+
+    .sommaire__liste {
+        grid-template-columns: 1fr;
+    }
+
+    .fiche__entete {
+        padding: 1.3rem 1.2rem 1rem 4.4rem;
+    }
+
+    .fiche__numero {
+        left: 1.2rem;
+        font-size: 2.2rem;
+    }
+
+    .fiche__liste {
+        padding: 1.2rem 1.2rem 1.4rem;
+    }
+
+    .fiche__image {
+        aspect-ratio: 16 / 10;
+    }
+
+    .encadre {
+        padding: 1.5rem 1.2rem;
+    }
+
+    .bouton-externe {
+        width: 100%;
+        padding: 0.9rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .pagination {
+        grid-template-columns: 1fr;
+    }
+
+    .pagination__lien--suivant {
+        text-align: left;
+    }
+
+    .pied__conteneur {
+        grid-template-columns: 1fr;
+        gap: 1.8rem;
+        text-align: center;
+    }
+}

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Les quatre grands types d'éruptions volcaniques : hawaïen, strombolien, vulcanien et peléen. Lave, type d'éruption et caractéristiques de chacun.">
+    <meta name="author" content="Projet NSI - HTML / CSS">
+    <title>Les Volcans — Types d'éruptions</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌋</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style_types.css">
+</head>
+<body>
+
+    <!-- ============ EN-TÊTE ET MENU ============ -->
+    <header class="entete">
+        <div class="entete__conteneur">
+            <a class="logo" href="index.html">
+                <span class="logo__icone">🌋</span>
+                <span class="logo__texte">Volcans<small>La Terre en feu</small></span>
+            </a>
+            <nav class="menu" aria-label="Navigation principale">
+                <ul class="menu__liste">
+                    <li><a class="menu__lien" href="index.html">Accueil</a></li>
+                    <li><a class="menu__lien menu__lien--actif" href="types.html">Types d'éruptions</a></li>
+                    <li><a class="menu__lien" href="records.html">Records</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ============ FIL D'ARIANE ET TITRE ============ -->
+        <section class="ouverture">
+            <p class="fil" aria-label="Fil d'Ariane">
+                <a href="index.html">Accueil</a> <span>›</span> <strong>Types d'éruptions</strong>
+            </p>
+            <h1 class="ouverture__titre">Les types de volcans</h1>
+            <p class="ouverture__chapeau">
+                La classification des éruptions repose sur deux critères&nbsp;: la
+                <strong>viscosité de la lave</strong> et sa <strong>teneur en gaz</strong>.
+                De ces deux paramètres découlent quatre grands comportements volcaniques,
+                du plus calme au plus dévastateur.
+            </p>
+        </section>
+
+        <div class="mise-en-page">
+
+            <!-- ============ SOMMAIRE (LISTE DE LIENS INTERNES) ============ -->
+            <aside class="sommaire" aria-label="Sommaire">
+                <h2 class="sommaire__titre">Sommaire</h2>
+                <ol class="sommaire__liste">
+                    <li><a href="#hawaiien">Le type hawaïen</a></li>
+                    <li><a href="#strombolien">Le type strombolien</a></li>
+                    <li><a href="#vulcanien">Le type vulcanien</a></li>
+                    <li><a href="#peleen">Le type peléen</a></li>
+                    <li><a href="#pour-aller-plus-loin">Pour aller plus loin</a></li>
+                </ol>
+            </aside>
+
+            <div class="fiches">
+
+                <!-- ---------- 1. Hawaïen ---------- -->
+                <article class="fiche" id="hawaiien">
+                    <header class="fiche__entete">
+                        <span class="fiche__numero">01</span>
+                        <h2 class="fiche__titre">Le type hawaïen</h2>
+                        <p class="fiche__etiquette">Éruption effusive et calme</p>
+                    </header>
+
+                    <img class="fiche__image"
+                         src="images/eruption-effusive.jpg"
+                         alt="Fontaine de lave et coulée incandescente sur les pentes d'un volcan, de nuit">
+
+                    <ul class="fiche__liste">
+                        <li><span class="cle">Lave</span> Très fluide et pauvre en silice.</li>
+                        <li><span class="cle">Éruption</span> Calme et effusive.</li>
+                        <li><span class="cle">Caractéristique</span> La lave s'écoule facilement en de longues
+                            rivières de feu sans produire d'explosions violentes, formant des volcans aux
+                            pentes douces (volcans boucliers).</li>
+                    </ul>
+                </article>
+
+                <!-- ---------- 2. Strombolien ---------- -->
+                <article class="fiche" id="strombolien">
+                    <header class="fiche__entete">
+                        <span class="fiche__numero">02</span>
+                        <h2 class="fiche__titre">Le type strombolien</h2>
+                        <p class="fiche__etiquette">Éruption mixte, effusive et explosive</p>
+                    </header>
+
+                    <img class="fiche__image"
+                         src="images/hero-volcan.jpg"
+                         alt="Explosions de fontaines de lave projetant des braises au-dessus du cratère d'un volcan">
+
+                    <ul class="fiche__liste">
+                        <li><span class="cle">Lave</span> Fluide à moyennement visqueuse.</li>
+                        <li><span class="cle">Éruption</span> Mixte, à la fois effusive et explosive.</li>
+                        <li><span class="cle">Caractéristique</span> Il se produit des coulées de lave
+                            accompagnées d'explosions régulières qui projettent des fontaines de lave,
+                            des cendres et des bombes volcaniques.</li>
+                    </ul>
+                </article>
+
+                <!-- ---------- 3. Vulcanien ---------- -->
+                <article class="fiche" id="vulcanien">
+                    <header class="fiche__entete">
+                        <span class="fiche__numero">03</span>
+                        <h2 class="fiche__titre">Le type vulcanien</h2>
+                        <p class="fiche__etiquette">Éruption très explosive</p>
+                    </header>
+
+                    <img class="fiche__image"
+                         src="images/panache-cendres.jpg"
+                         alt="Épais panache de cendres sombres jaillissant du cratère d'un volcan explosif">
+
+                    <ul class="fiche__liste">
+                        <li><span class="cle">Lave</span> Visqueuse et riche en gaz.</li>
+                        <li><span class="cle">Éruption</span> Très explosive.</li>
+                        <li><span class="cle">Caractéristique</span> Le magma obstrue la cheminée du volcan.
+                            La pression monte jusqu'à provoquer une violente explosion qui projette des
+                            nuages de cendres sombres et des blocs de pierre incandescents.</li>
+                    </ul>
+                </article>
+
+                <!-- ---------- 4. Peléen ---------- -->
+                <article class="fiche" id="peleen">
+                    <header class="fiche__entete">
+                        <span class="fiche__numero">04</span>
+                        <h2 class="fiche__titre">Le type peléen</h2>
+                        <p class="fiche__etiquette">Éruption violente et destructrice</p>
+                    </header>
+
+                    <img class="fiche__image"
+                         src="images/cratere-kilauea.jpg"
+                         alt="Vue aérienne d'un cratère volcanique aux parois rougeoyantes entouré de coulées solidifiées">
+
+                    <ul class="fiche__liste">
+                        <li><span class="cle">Lave</span> Extrêmement visqueuse.</li>
+                        <li><span class="cle">Éruption</span> Violente et destructrice.</li>
+                        <li><span class="cle">Caractéristique</span> Un «&nbsp;bouchon&nbsp;» de lave solide se
+                            forme au sommet. Sous la pression, une explosion latérale ou verticale pulvérise
+                            ce bouchon et génère des nuées ardentes (des avalanches de gaz brûlants, de
+                            cendres et de roches) qui dévalent les pentes à grande vitesse.</li>
+                    </ul>
+                </article>
+
+                <!-- ---------- ENCADRÉ : COMPARAISON RAPIDE ---------- -->
+                <section class="encadre" id="pour-aller-plus-loin">
+                    <h2 class="encadre__titre">Du plus calme au plus violent</h2>
+                    <p class="encadre__texte">
+                        Plus une lave est visqueuse, plus les gaz restent piégés à l'intérieur&nbsp;:
+                        la pression augmente et l'éruption devient explosive. À l'inverse, une lave très
+                        fluide laisse les gaz s'échapper en douceur et s'écoule tranquillement.
+                    </p>
+                    <p class="encadre__texte">
+                        Ces quatre familles portent le nom de volcans célèbres&nbsp;: le Kīlauea à Hawaï,
+                        le Stromboli en Italie, le Vulcano dans les îles Éoliennes et la montagne Pelée
+                        en Martinique.
+                    </p>
+
+                    <!-- Bouton vers un lien externe -->
+                    <a class="bouton-externe"
+                       href="https://observaterre.fr/risques-telluriques-en-france/risque-volcanique/types-de-volcans-et-origines/"
+                       target="_blank"
+                       rel="noopener">
+                        🔗 Consulter le dossier complet sur Observaterre.fr
+                        <span class="bouton-externe__indice">lien externe — nouvelle fenêtre</span>
+                    </a>
+                </section>
+
+                <!-- ---------- NAVIGATION ENTRE LES PAGES ---------- -->
+                <nav class="pagination" aria-label="Navigation entre les pages">
+                    <a class="pagination__lien pagination__lien--precedent" href="index.html">
+                        <span>← Page précédente</span>
+                        <strong>Accueil</strong>
+                    </a>
+                    <a class="pagination__lien pagination__lien--suivant" href="records.html">
+                        <span>Page suivante →</span>
+                        <strong>Records des volcans</strong>
+                    </a>
+                </nav>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- ============ PIED DE PAGE ============ -->
+    <footer class="pied">
+        <div class="pied__conteneur">
+            <div class="pied__colonne">
+                <h3 class="pied__titre">Les Volcans</h3>
+                <p class="pied__texte">
+                    Les fiches de cette page s'appuient sur la classification classique des éruptions
+                    (Éditions Larousse) et sur le dossier «&nbsp;Types de volcans et origines&nbsp;»
+                    du site Observaterre.fr.
+                </p>
+            </div>
+            <div class="pied__colonne">
+                <h3 class="pied__titre">Plan du site</h3>
+                <ul class="pied__liste">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="types.html">Types d'éruptions</a></li>
+                    <li><a href="records.html">Records des volcans</a></li>
+                </ul>
+            </div>
+            <div class="pied__colonne">
+                <h3 class="pied__titre">Sur cette page</h3>
+                <ul class="pied__liste">
+                    <li><a href="#hawaiien">Type hawaïen</a></li>
+                    <li><a href="#strombolien">Type strombolien</a></li>
+                    <li><a href="#vulcanien">Type vulcanien</a></li>
+                    <li><a href="#peleen">Type peléen</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="pied__signature">© 2026 — Projet NSI · Thème : les volcans 🌋</p>
+    </footer>
+
+</body>
+</html>
