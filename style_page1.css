@@ -1,0 +1,612 @@
+/* ==========================================================================
+   LES VOLCANS — Page d'accueil
+   Feuille de style n°1 : style_page1.css
+   Polices : « Bebas Neue » pour les titres, « Lato » pour les textes
+   ========================================================================== */
+
+/* ---------- 1. Variables de couleurs (palette volcanique) ---------- */
+:root {
+    --noir-volcan:  #100b09;
+    --gris-fumee:   #1c1512;
+    --gris-cendre:  #2a211c;
+    --lave:         #e8481c;
+    --braise:       #ff7a33;
+    --or-chaud:     #f4c15d;
+    --cendre-claire: #ded3c9;
+    --texte:        #f2ebe4;
+    --texte-doux:   #b8a99e;
+    --police-titres: 'Bebas Neue', 'Impact', 'Haettenschweiler', sans-serif;
+    --police-textes: 'Lato', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* ---------- 2. Réglages généraux ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--police-textes);
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--texte);
+    background-color: var(--noir-volcan);
+    background-image:
+        radial-gradient(circle at 15% 0%, rgba(232, 72, 28, 0.22), transparent 45%),
+        radial-gradient(circle at 85% 12%, rgba(244, 193, 93, 0.10), transparent 40%);
+    background-repeat: no-repeat;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--braise);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: var(--or-chaud);
+    text-decoration: underline;
+}
+
+/* ---------- 3. En-tête et menu de navigation ---------- */
+.entete {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: rgba(16, 11, 9, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(244, 193, 93, 0.22);
+}
+
+.entete__conteneur {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.7rem 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.8rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: var(--texte);
+}
+
+.logo:hover {
+    text-decoration: none;
+}
+
+.logo__icone {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.logo__texte {
+    font-family: var(--police-titres);
+    font-size: 1.9rem;
+    letter-spacing: 2px;
+    line-height: 0.9;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo__texte small {
+    font-family: var(--police-textes);
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--or-chaud);
+}
+
+.menu__liste {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.menu__lien {
+    display: block;
+    padding: 0.45rem 1rem;
+    border-radius: 40px;
+    color: var(--cendre-claire);
+    font-size: 0.92rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    transition: background-color 0.25s, color 0.25s;
+}
+
+.menu__lien:hover,
+.menu__lien:focus {
+    background-color: rgba(232, 72, 28, 0.25);
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu__lien--actif {
+    background-color: var(--lave);
+    color: #fff;
+}
+
+/* ---------- 4. Bannière (héros) ---------- */
+.banniere {
+    position: relative;
+    min-height: 78vh;
+    display: flex;
+    align-items: center;
+    padding: 5rem 1.5rem;
+    background-image: url("images/hero-volcan.jpg");
+    background-size: cover;
+    background-position: center 35%;
+    text-align: center;
+}
+
+.banniere__voile {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+                rgba(16, 11, 9, 0.55) 0%,
+                rgba(16, 11, 9, 0.72) 55%,
+                var(--noir-volcan) 100%);
+}
+
+.banniere__contenu {
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.banniere__surtitre {
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--or-chaud);
+    margin-bottom: 0.6rem;
+}
+
+.banniere__titre {
+    font-family: var(--police-titres);
+    font-size: clamp(3.4rem, 12vw, 8rem);
+    line-height: 0.92;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-shadow: 0 6px 35px rgba(232, 72, 28, 0.75);
+}
+
+.banniere__sous-titre {
+    font-size: clamp(1rem, 2.2vw, 1.25rem);
+    font-weight: 300;
+    color: var(--cendre-claire);
+    margin: 1.2rem auto 2rem;
+    max-width: 640px;
+}
+
+.banniere__boutons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* ---------- 5. Boutons ---------- */
+.bouton {
+    display: inline-block;
+    padding: 0.85rem 1.9rem;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.6px;
+    transition: transform 0.25s, box-shadow 0.25s, background-color 0.25s;
+}
+
+.bouton:hover,
+.bouton:focus {
+    text-decoration: none;
+    transform: translateY(-3px);
+}
+
+.bouton--lave {
+    background-image: linear-gradient(135deg, var(--lave), var(--braise));
+    color: #fff;
+    box-shadow: 0 10px 26px rgba(232, 72, 28, 0.35);
+}
+
+.bouton--lave:hover,
+.bouton--lave:focus {
+    color: #fff;
+    box-shadow: 0 14px 34px rgba(232, 72, 28, 0.55);
+}
+
+.bouton--contour {
+    border: 2px solid var(--or-chaud);
+    color: var(--or-chaud);
+    background-color: rgba(16, 11, 9, 0.35);
+}
+
+.bouton--contour:hover,
+.bouton--contour:focus {
+    background-color: var(--or-chaud);
+    color: var(--noir-volcan);
+}
+
+.centre {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+/* ---------- 6. Bandeau de chiffres clés ---------- */
+.chiffres {
+    max-width: 1200px;
+    margin: -3rem auto 0;
+    padding: 0 1.5rem;
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.chiffre {
+    background-color: var(--gris-fumee);
+    border: 1px solid rgba(244, 193, 93, 0.18);
+    border-radius: 14px;
+    padding: 1.4rem 1.1rem;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+.chiffre__valeur {
+    display: block;
+    font-family: var(--police-titres);
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    color: var(--braise);
+    line-height: 1.1;
+}
+
+.chiffre__legende {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--texte-doux);
+    line-height: 1.45;
+}
+
+/* ---------- 7. Blocs de contenu ---------- */
+.bloc {
+    padding: 4.5rem 1.5rem;
+}
+
+.bloc--sombre {
+    background-color: rgba(28, 21, 18, 0.75);
+    border-top: 1px solid rgba(244, 193, 93, 0.14);
+    border-bottom: 1px solid rgba(244, 193, 93, 0.14);
+}
+
+.bloc__conteneur {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.bloc__conteneur--2col {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.titre-section {
+    font-family: var(--police-titres);
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--or-chaud);
+    margin-bottom: 1.2rem;
+    position: relative;
+    padding-bottom: 0.6rem;
+}
+
+.titre-section::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 70px;
+    height: 4px;
+    border-radius: 4px;
+    background-image: linear-gradient(90deg, var(--lave), var(--or-chaud));
+}
+
+.titre-section--centre {
+    text-align: center;
+}
+
+.titre-section--centre::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bloc__texte p {
+    margin-bottom: 1rem;
+    color: var(--cendre-claire);
+}
+
+.bloc__texte strong {
+    color: #fff;
+}
+
+.introduction {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    color: var(--texte-doux);
+}
+
+.bloc__figure {
+    background-color: var(--gris-fumee);
+    border: 1px solid rgba(244, 193, 93, 0.18);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+}
+
+.bloc__figure img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+.bloc__figure figcaption {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--texte-doux);
+    padding: 0.9rem 1.1rem;
+    border-top: 1px solid rgba(244, 193, 93, 0.14);
+}
+
+/* ---------- 8. Liste à puces personnalisée ---------- */
+.liste-puces {
+    list-style: none;
+    margin-top: 1.2rem;
+    display: grid;
+    gap: 0.6rem;
+}
+
+.liste-puces li {
+    position: relative;
+    padding-left: 1.8rem;
+    color: var(--cendre-claire);
+}
+
+.liste-puces li::before {
+    content: "▲";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--lave);
+    font-size: 0.85rem;
+}
+
+.liste-puces strong {
+    color: var(--or-chaud);
+}
+
+/* ---------- 9. Cartes des types d'éruptions (liste) ---------- */
+.cartes {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.4rem;
+}
+
+.carte {
+    position: relative;
+    background-color: var(--gris-fumee);
+    border: 1px solid rgba(244, 193, 93, 0.18);
+    border-radius: 16px;
+    padding: 2rem 1.3rem 1.4rem;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.carte:hover {
+    transform: translateY(-8px);
+    border-color: var(--lave);
+    box-shadow: 0 20px 40px rgba(232, 72, 28, 0.28);
+}
+
+.carte__numero {
+    position: absolute;
+    top: -0.9rem;
+    left: 1.3rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background-image: linear-gradient(135deg, var(--lave), var(--braise));
+    color: #fff;
+    font-family: var(--police-titres);
+    font-size: 1.3rem;
+    box-shadow: 0 6px 16px rgba(232, 72, 28, 0.45);
+}
+
+.carte__titre {
+    font-family: var(--police-titres);
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+}
+
+.carte__resume {
+    font-size: 0.92rem;
+    color: var(--texte-doux);
+    line-height: 1.65;
+}
+
+.etiquette {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.22rem 0.8rem;
+    border: 1px solid var(--or-chaud);
+    border-radius: 30px;
+    font-size: 0.72rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--or-chaud);
+}
+
+/* ---------- 10. Pied de page ---------- */
+.pied {
+    background-color: #0a0706;
+    border-top: 3px solid var(--lave);
+    padding: 3rem 1.5rem 1.5rem;
+}
+
+.pied__conteneur {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2.5rem;
+}
+
+.pied__titre {
+    font-family: var(--police-titres);
+    font-size: 1.4rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--or-chaud);
+    margin-bottom: 0.8rem;
+}
+
+.pied__texte,
+.pied__liste {
+    font-size: 0.9rem;
+    color: var(--texte-doux);
+}
+
+.pied__liste {
+    list-style: none;
+}
+
+.pied__liste li {
+    margin-bottom: 0.45rem;
+}
+
+.pied__liste a {
+    color: var(--cendre-claire);
+}
+
+.pied__signature {
+    max-width: 1150px;
+    margin: 2.5rem auto 0;
+    padding-top: 1.2rem;
+    border-top: 1px solid rgba(244, 193, 93, 0.15);
+    text-align: center;
+    font-size: 0.82rem;
+    color: var(--texte-doux);
+}
+
+/* ==========================================================================
+   11. RESPONSIVE — la page s'adapte à la largeur de l'écran
+   ========================================================================== */
+
+/* Tablettes : jusqu'à 1024 px */
+@media screen and (max-width: 1024px) {
+    .cartes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .chiffres {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: -2rem;
+    }
+
+    .bloc__conteneur--2col {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .bloc__conteneur--inverse .bloc__figure {
+        order: -1;
+    }
+}
+
+/* Téléphones : jusqu'à 640 px */
+@media screen and (max-width: 640px) {
+    body {
+        font-size: 1rem;
+    }
+
+    .entete__conteneur {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 0.7rem 1rem;
+    }
+
+    .logo__texte {
+        font-size: 1.6rem;
+    }
+
+    .menu__liste {
+        justify-content: center;
+    }
+
+    .menu__lien {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    .banniere {
+        min-height: 68vh;
+        padding: 3.5rem 1.1rem;
+        background-position: center;
+    }
+
+    .banniere__boutons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .bouton {
+        text-align: center;
+    }
+
+    .chiffres {
+        grid-template-columns: 1fr;
+        margin-top: 1.5rem;
+        padding: 0 1.1rem;
+    }
+
+    .bloc {
+        padding: 3rem 1.1rem;
+    }
+
+    .cartes {
+        grid-template-columns: 1fr;
+        gap: 1.6rem;
+    }
+
+    .pied__conteneur {
+        grid-template-columns: 1fr;
+        gap: 1.8rem;
+        text-align: center;
+    }
+}

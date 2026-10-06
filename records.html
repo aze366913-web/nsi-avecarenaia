@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Les records des volcans : le plus haut, le plus actif, la plus grande éruption, le plus grand panache et bien d'autres records volcaniques mondiaux.">
+    <meta name="author" content="Projet NSI - HTML / CSS">
+    <title>Les Volcans — Records</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌋</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style_records.css">
+</head>
+<body>
+
+    <!-- ============ EN-TÊTE ET MENU ============ -->
+    <header class="entete">
+        <div class="entete__conteneur">
+            <a class="logo" href="index.html">
+                <span class="logo__icone">🌋</span>
+                <span class="logo__texte">Volcans<small>La Terre en feu</small></span>
+            </a>
+            <nav class="menu" aria-label="Navigation principale">
+                <ul class="menu__liste">
+                    <li><a class="menu__lien" href="index.html">Accueil</a></li>
+                    <li><a class="menu__lien" href="types.html">Types d'éruptions</a></li>
+                    <li><a class="menu__lien menu__lien--actif" href="records.html">Records</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ============ TITRE DE PAGE ============ -->
+        <section class="ouverture">
+            <p class="fil" aria-label="Fil d'Ariane">
+                <a href="index.html">Accueil</a> <span>›</span> <strong>Records</strong>
+            </p>
+            <h1 class="ouverture__titre">Les records des volcans</h1>
+            <p class="ouverture__chapeau">
+                <strong>1&nbsp;432 volcans actifs</strong> sont recensés dans le monde&nbsp;: entre le
+                plus haut sommet et la plus petite éruption jamais observée, voici le palmarès
+                des extrêmes volcaniques de notre planète.
+            </p>
+        </section>
+
+        <!-- ============ TABLEAU DES RECORDS ============ -->
+        <section class="section-tableau">
+            <div class="section-tableau__entete">
+                <h2 class="titre-section">Le tableau des records</h2>
+                <p class="section-tableau__note">
+                    Faites défiler le tableau horizontalement si nécessaire&nbsp;; sur téléphone,
+                    chaque record s'affiche sous forme de fiche.
+                </p>
+            </div>
+
+            <div class="tableau-cadre">
+                <table class="tableau-records">
+                    <caption>Palmarès des extrêmes volcaniques mondiaux</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Record</th>
+                            <th scope="col">Catégorie</th>
+                            <th scope="col">Détenteur</th>
+                            <th scope="col">Valeur</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" data-label="Record">Plus haut volcan</th>
+                            <td data-label="Catégorie">Hauteur totale</td>
+                            <td data-label="Détenteur">Mauna Kea, Hawaï</td>
+                            <td data-label="Valeur">10&nbsp;230&nbsp;m au-dessus du plancher océanique,
+                                pour une altitude de 4&nbsp;207,5&nbsp;m</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" data-label="Record">Plus haut volcan</th>
+                            <td data-label="Catégorie">Altitude</td>
+                            <td data-label="Détenteur">Nevado Ojos del Salado, Chili</td>
+                            <td data-label="Valeur">6&nbsp;887&nbsp;m d'altitude</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" data-label="Record">Plus grand volcan d'Europe</th>
+                            <td data-label="Catégorie">Superficie</td>
+                            <td data-label="Détenteur">Le Cantal, France</td>
+                            <td data-label="Valeur">2&nbsp;700&nbsp;km² et 70&nbsp;km de diamètre</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" data-label="Record">Plus grande éruption</th>
+                            <td data-label="Catégorie">Volume de matériaux éjectés</td>
+                            <td data-label="Détenteur">Toba, il y a 73&nbsp;000 ans</td>
+                            <td data-label="Valeur">2&nbsp;800&nbsp;km³</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" data-label="Record">Plus petite éruption</th>
+                            <td data-label="Catégorie">Volume de matériaux éjectés</td>
+                            <td data-label="Détenteur">Forage géothermique à Hverarönd, Islande, 1977</td>
+                            <td data-label="Valeur">1,2&nbsp;m³ de basalte</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" data-label="Record">Volcan le plus actif</th>
+                            <td data-label="Catégorie">Fréquence des éruptions</td>
+                            <td data-label="Détenteur">Le Kīlauea et le piton de la Fournaise</td>
+                            <td data-label="Valeur">Une éruption environ tous les un an à un an et demi</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" data-label="Record">Plus jeune volcan</th>
+                            <td data-label="Catégorie">Âge</td>
+                            <td data-label="Détenteur">Ardoukôba</td>
+                            <td data-label="Valeur">Première éruption en novembre 1978</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" data-label="Record">Plus grand cratère volcanique terrestre</th>
+                            <td data-label="Catégorie">Dimensions</td>
+                            <td data-label="Détenteur">Toba, formé il y a 73&nbsp;000 ans</td>
+                            <td data-label="Valeur">100&nbsp;km de longueur sur 30&nbsp;km de largeur</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" data-label="Record">Plus grand nombre de victimes</th>
+                            <td data-label="Catégorie">Bilan humain</td>
+                            <td data-label="Détenteur">Tambora, sur l'île de Sumbawa, Indonésie, 1816</td>
+                            <td data-label="Valeur">88&nbsp;000 morts liés directement à l'éruption et
+                                200&nbsp;000 morts supplémentaires par famine</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" data-label="Record">Éruption la plus bruyante</th>
+                            <td data-label="Catégorie">Intensité sonore</td>
+                            <td data-label="Détenteur">Krakatoa, Indonésie, le 27 août 1883</td>
+                            <td data-label="Valeur">Explosion entendue jusqu'à Rodrigues, à 500&nbsp;km à
+                                l'est de l'île Maurice, soit à 4&nbsp;811&nbsp;km de l'éruption</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" data-label="Record">Plus grand panache volcanique</th>
+                            <td data-label="Catégorie">Hauteur du panache</td>
+                            <td data-label="Détenteur">Hunga Tonga, aux Tonga, 2022</td>
+                            <td data-label="Valeur">57&nbsp;km de hauteur</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" data-label="Record">Plus longue coulée de lave</th>
+                            <td data-label="Catégorie">Longueur</td>
+                            <td data-label="Détenteur">Undara, Australie</td>
+                            <td data-label="Valeur">160&nbsp;km de longueur</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- ============ FOCUS FRANCE (IMAGE + LISTE) ============ -->
+        <section class="focus">
+            <div class="focus__conteneur">
+                <figure class="focus__figure">
+                    <img src="images/puy-mary-cantal.jpg"
+                         alt="Sentier de randonnée gravissant le Puy Mary, dans les monts du Cantal en Auvergne">
+                    <figcaption>
+                        Le Puy Mary, dans les monts du Cantal&nbsp;: les restes d'un immense volcan
+                        éteint, le plus grand d'Europe avec 2&nbsp;700&nbsp;km².
+                    </figcaption>
+                </figure>
+
+                <div class="focus__texte">
+                    <h2 class="titre-section">Le volcanisme en France</h2>
+                    <p>
+                        La France métropolitaine possède de nombreux volcans, aujourd'hui endormis
+                        ou éteints&nbsp;: la chaîne des Puys, le Cantal, le Mont-Dore, le massif de
+                        l'Aubrac ou encore l'Escandorgue.
+                    </p>
+                    <h3 class="focus__sous-titre">Trois familles de volcans français</h3>
+                    <ul class="liste-montagnes">
+                        <li><strong>Les volcans de type strombolien&nbsp;:</strong> cônes raides nés de
+                            projections de scories, comme les puys de la chaîne des Puys.</li>
+                        <li><strong>Les volcans de type péléen&nbsp;:</strong> dômes de lave très visqueuse
+                            accumulée au sommet, comme le Puy de Dôme.</li>
+                        <li><strong>Les volcans de type hawaïen&nbsp;:</strong> épanchements fluides formant
+                            de larges plateaux basaltiques, comme ceux de l'Aubrac.</li>
+                    </ul>
+                    <p class="focus__rappel">
+                        En France, la surveillance du risque volcanique est assurée par
+                        l'Observatoire de Physique du Globe de Clermont-Ferrand.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ À RETENIR ============ -->
+        <section class="aretenir">
+            <h2 class="titre-section titre-section--centre">À retenir en cinq points</h2>
+            <ul class="aretenir__liste">
+                <li>Le <strong>Mauna Kea</strong> est le plus haut volcan du monde depuis sa base&nbsp;: 10&nbsp;230&nbsp;m.</li>
+                <li>Le <strong>Nevado Ojos del Salado</strong>, au Chili, est le plus haut volcan par son altitude&nbsp;: 6&nbsp;887&nbsp;m.</li>
+                <li>L'éruption du <strong>Krakatoa</strong> de 1883 reste la plus bruyante jamais enregistrée&nbsp;: 4&nbsp;811&nbsp;km.</li>
+                <li>Le <strong>Hunga Tonga</strong> a produit en 2022 le plus grand panache volcanique connu&nbsp;: 57&nbsp;km.</li>
+                <li>La plus longue coulée de lave jamais mesurée atteint <strong>160&nbsp;km</strong> à Undara, en Australie.</li>
+            </ul>
+
+            <div class="aretenir__boutons">
+                <a class="bouton bouton--lave" href="types.html">Revoir les types d'éruptions</a>
+                <!-- Bouton vers un lien externe -->
+                <a class="bouton bouton--contour"
+                   href="https://observaterre.fr/risques-telluriques-en-france/risque-volcanique/types-de-volcans-et-origines/"
+                   target="_blank"
+                   rel="noopener">🔗 Site partenaire — Observaterre.fr</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============ PIED DE PAGE ============ -->
+    <footer class="pied">
+        <div class="pied__conteneur">
+            <div class="pied__colonne">
+                <h3 class="pied__titre">Les Volcans</h3>
+                <p class="pied__texte">
+                    Les chiffres de cette page proviennent de la classification des éruptions
+                    volcaniques des Éditions Larousse et du dossier «&nbsp;Types de volcans et
+                    origines&nbsp;» du site Observaterre.fr.
+                </p>
+            </div>
+            <div class="pied__colonne">
+                <h3 class="pied__titre">Plan du site</h3>
+                <ul class="pied__liste">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="types.html">Types d'éruptions</a></li>
+                    <li><a href="records.html">Records des volcans</a></li>
+                </ul>
+            </div>
+            <div class="pied__colonne">
+                <h3 class="pied__titre">Sources</h3>
+                <ul class="pied__liste">
+                    <li>Éditions Larousse</li>
+                    <li><a href="https://observaterre.fr/risques-telluriques-en-france/risque-volcanique/types-de-volcans-et-origines/"
+                           target="_blank" rel="noopener">Observaterre.fr</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="pied__signature">© 2026 — Projet NSI · Thème : les volcans 🌋</p>
+    </footer>
+
+</body>
+</html>

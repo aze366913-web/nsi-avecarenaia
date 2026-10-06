@@ -1,11 +1,231 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <title>Les Volcans</title>
-	<link rel="stylesheet" href="style_page1.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site pédagogique sur les volcans : qu'est-ce qu'un volcan, les quatre grands types d'éruptions et les records volcaniques du monde.">
+    <meta name="author" content="Projet NSI - HTML / CSS">
+    <title>Les Volcans — Accueil</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌋</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style_page1.css">
 </head>
 <body>
+
+    <!-- ============ EN-TÊTE ET MENU ============ -->
+    <header class="entete">
+        <div class="entete__conteneur">
+            <a class="logo" href="index.html">
+                <span class="logo__icone">🌋</span>
+                <span class="logo__texte">Volcans<small>La Terre en feu</small></span>
+            </a>
+            <nav class="menu" aria-label="Navigation principale">
+                <ul class="menu__liste">
+                    <li><a class="menu__lien menu__lien--actif" href="index.html">Accueil</a></li>
+                    <li><a class="menu__lien" href="types.html">Types d'éruptions</a></li>
+                    <li><a class="menu__lien" href="records.html">Records</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ============ BANNIÈRE ============ -->
+        <section class="banniere">
+            <div class="banniere__voile"></div>
+            <div class="banniere__contenu">
+                <p class="banniere__surtitre">Projet HTML&nbsp;/&nbsp;CSS — Sciences de la Terre</p>
+                <h1 class="banniere__titre">Les Volcans</h1>
+                <p class="banniere__sous-titre">
+                    Des rivières de lave aux nuées ardentes : découvrez comment la Terre
+                    libère sa chaleur interne et pourquoi chaque volcan a son propre caractère.
+                </p>
+                <div class="banniere__boutons">
+                    <a class="bouton bouton--lave" href="types.html">Explorer les types d'éruptions</a>
+                    <a class="bouton bouton--contour" href="records.html">Voir les records</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CHIFFRES CLÉS ============ -->
+        <section class="chiffres" aria-label="Chiffres clés">
+            <article class="chiffre">
+                <span class="chiffre__valeur">1&nbsp;432</span>
+                <span class="chiffre__legende">volcans actifs dans le monde</span>
+            </article>
+            <article class="chiffre">
+                <span class="chiffre__valeur">4</span>
+                <span class="chiffre__legende">grands types d'éruptions</span>
+            </article>
+            <article class="chiffre">
+                <span class="chiffre__valeur">6&nbsp;887&nbsp;m</span>
+                <span class="chiffre__legende">le plus haut volcan : Nevado Ojos del Salado</span>
+            </article>
+            <article class="chiffre">
+                <span class="chiffre__valeur">57&nbsp;km</span>
+                <span class="chiffre__legende">le plus grand panache : Hunga Tonga, 2022</span>
+            </article>
+        </section>
+
+        <!-- ============ QU'EST-CE QU'UN VOLCAN ? ============ -->
+        <section class="bloc" id="definition">
+            <div class="bloc__conteneur bloc__conteneur--2col">
+                <div class="bloc__texte">
+                    <h2 class="titre-section">Qu'est-ce qu'un volcan&nbsp;?</h2>
+                    <p>
+                        Un volcan est une ouverture de la croûte terrestre par laquelle s'échappent
+                        du <strong>magma</strong>, des gaz et des fragments de roche. En surface, le magma
+                        prend le nom de <strong>lave</strong>&nbsp;: il se refroidit, s'accumule et construit peu à peu
+                        un relief, souvent en forme de cône.
+                    </p>
+                    <p>
+                        Tous les volcans ne se ressemblent pas. La <em>viscosité</em> de la lave et sa
+                        <em>teneur en gaz</em> décident de tout&nbsp;: une lave fluide s'écoule en longues
+                        rivières de feu, tandis qu'une lave pâteuse emprisonne les gaz et libère sa
+                        pression dans des explosions violentes.
+                    </p>
+                    <ul class="liste-puces">
+                        <li><strong>Cheminée&nbsp;:</strong> conduit qui relie la chambre magmatique au cratère.</li>
+                        <li><strong>Cratère&nbsp;:</strong> dépression circulaire au sommet du volcan.</li>
+                        <li><strong>Nuée ardente&nbsp;:</strong> avalanche de gaz brûlants, de cendres et de roches.</li>
+                        <li><strong>Panache&nbsp;:</strong> colonne de cendres et de gaz projetée dans l'atmosphère.</li>
+                    </ul>
+                </div>
+                <figure class="bloc__figure">
+                    <img src="images/cratere-kilauea.jpg"
+                         alt="Vue aérienne d'un grand cratère volcanique au sommet d'un volcan bouclier hawaïen">
+                    <figcaption>
+                        Le cratère du Kīlauea, à Hawaï&nbsp;: un volcan bouclier au sommet évasé,
+                        formé par des milliers d'années de coulées fluides.
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- ============ LES QUATRE TYPES (LISTE + LIENS) ============ -->
+        <section class="bloc bloc--sombre" id="types">
+            <div class="bloc__conteneur">
+                <h2 class="titre-section titre-section--centre">Les quatre grands types d'éruptions</h2>
+                <p class="introduction">
+                    Cliquez sur un type d'éruption pour accéder à sa fiche détaillée sur la page
+                    <a href="types.html">Types d'éruptions</a>.
+                </p>
+
+                <ul class="cartes">
+                    <li class="carte">
+                        <span class="carte__numero">1</span>
+                        <h3 class="carte__titre"><a href="types.html#hawaiien">Le type hawaïen</a></h3>
+                        <p class="carte__resume">
+                            Lave très fluide et pauvre en silice. Éruption calme et effusive&nbsp;:
+                            de longues rivières de lave sans explosion violente.
+                        </p>
+                        <span class="etiquette">Effusive</span>
+                    </li>
+                    <li class="carte">
+                        <span class="carte__numero">2</span>
+                        <h3 class="carte__titre"><a href="types.html#strombolien">Le type strombolien</a></h3>
+                        <p class="carte__resume">
+                            Lave fluide à moyennement visqueuse. Éruption mixte, avec coulées de lave
+                            et fontaines de lave régulières.
+                        </p>
+                        <span class="etiquette">Mixte</span>
+                    </li>
+                    <li class="carte">
+                        <span class="carte__numero">3</span>
+                        <h3 class="carte__titre"><a href="types.html#vulcanien">Le type vulcanien</a></h3>
+                        <p class="carte__resume">
+                            Lave visqueuse et riche en gaz. La cheminée se bouche, la pression monte
+                            puis explose violemment.
+                        </p>
+                        <span class="etiquette">Explosive</span>
+                    </li>
+                    <li class="carte">
+                        <span class="carte__numero">4</span>
+                        <h3 class="carte__titre"><a href="types.html#peleen">Le type peléen</a></h3>
+                        <p class="carte__resume">
+                            Lave extrêmement visqueuse. Un bouchon se forme au sommet&nbsp;: les nuées
+                            ardentes dévalent alors les pentes à grande vitesse.
+                        </p>
+                        <span class="etiquette">Destructrice</span>
+                    </li>
+                </ul>
+
+                <div class="centre">
+                    <a class="bouton bouton--lave" href="types.html">Lire les fiches détaillées</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ ZOOM ============ -->
+        <section class="bloc" id="risques">
+            <div class="bloc__conteneur bloc__conteneur--2col bloc__conteneur--inverse">
+                <figure class="bloc__figure">
+                    <img src="images/panache-cendres.jpg"
+                         alt="Panache de cendres sombres s'élevant du cratère d'un volcan lors d'une éruption explosive">
+                    <figcaption>
+                        Un panache de cendres peut monter à plusieurs kilomètres d'altitude
+                        et perturber le trafic aérien sur des continents entiers.
+                    </figcaption>
+                </figure>
+                <div class="bloc__texte">
+                    <h2 class="titre-section">Vivre avec les volcans</h2>
+                    <p>
+                        Les volcans sont à la fois une menace et une richesse. Leurs sols, riches en
+                        minéraux, comptent parmi les plus fertiles de la planète, et la géothermie
+                        qu'ils fournissent alimente des centrales électriques en Islande, au Kenya ou
+                        en Nouvelle-Zélande.
+                    </p>
+                    <p>
+                        Mais ils imposent aussi une surveillance constante&nbsp;: capteurs sismiques,
+                        mesure des déformations du sol et suivi des gaz permettent aujourd'hui de
+                        prévoir la plupart des éruptions et d'évacuer les populations à temps.
+                    </p>
+                    <p>
+                        En France, une page de référence recense les
+                        <a href="https://observaterre.fr/risques-telluriques-en-france/risque-volcanique/types-de-volcans-et-origines/"
+                           target="_blank" rel="noopener">différents types de volcans et leurs origines</a>&nbsp;;
+                        les fiches de la page suivante s'en inspirent.
+                    </p>
+                    <a class="bouton bouton--contour" href="records.html">Découvrir les records mondiaux</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============ PIED DE PAGE ============ -->
+    <footer class="pied">
+        <div class="pied__conteneur">
+            <div class="pied__colonne">
+                <h3 class="pied__titre">Les Volcans</h3>
+                <p class="pied__texte">
+                    Site réalisé dans le cadre du projet HTML&nbsp;/&nbsp;CSS&nbsp;: au moins trois pages,
+                    une liste, un tableau, un bouton vers un lien externe, des images,
+                    deux polices et des fichiers CSS séparés.
+                </p>
+            </div>
+            <div class="pied__colonne">
+                <h3 class="pied__titre">Plan du site</h3>
+                <ul class="pied__liste">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="types.html">Types d'éruptions</a></li>
+                    <li><a href="records.html">Records des volcans</a></li>
+                </ul>
+            </div>
+            <div class="pied__colonne">
+                <h3 class="pied__titre">Sources</h3>
+                <ul class="pied__liste">
+                    <li>Éditions Larousse</li>
+                    <li><a href="https://observaterre.fr/risques-telluriques-en-france/risque-volcanique/types-de-volcans-et-origines/"
+                           target="_blank" rel="noopener">Observaterre.fr</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="pied__signature">© 2026 — Projet NSI · Thème : les volcans 🌋</p>
+    </footer>
 
 </body>
 </html>
